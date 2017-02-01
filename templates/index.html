@@ -60,14 +60,27 @@
       {% endfor %}
     </div>
     
-    <div id="animals"><table id="data" class="table table-striped table-hover">
-	<thead class ="thead-inverse">
-	  <tr id="cols">
-	  </tr>
-	</thead>
-	<tbody id="rows"> 
-	</tbody>
-    </table></div>
+    <div class="table-responsive">
+	  <table class="table table-striped table-hover">
+	    <thead class="thead-inverse">
+	     <tr> 
+	{% for item in headers %}
+	         <th>{{ item }}</th>
+	{% endfor %}
+	     </tr>
+	    </thead>
+	    <tbody>
+	{% for row in content %}
+	     <tr>
+	  {% for datum in row %}
+	            <td>{{ datum }} </td>
+	  {% endfor %}
+	     </tr>
+	{% endfor %}
+	    </tbody>
+	   </table>
+	</div> 
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
