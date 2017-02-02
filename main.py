@@ -1,3 +1,4 @@
+
 """`main` is the top level module for your Flask application."""
 
 # Data Exploration Byte Version 1
@@ -24,7 +25,7 @@ JINJA_ENVIRONMENT = jinja2.Environment(
     autoescape=True)
 
 # This API key is provided by google as described in the tutorial
-API_KEY = 'AIzaSyCuKKwcT5mUYZP_Q-heqCPjvdWyacRuX00'
+API_KEY = 'AIzaSyAnbE5U-Anwe5Eq_erJ4tE1qT3reAF_qjk'
 
 
 # This uses discovery to create an object that can talk to the 
@@ -32,7 +33,7 @@ API_KEY = 'AIzaSyCuKKwcT5mUYZP_Q-heqCPjvdWyacRuX00'
 service = build('fusiontables', 'v1', developerKey=API_KEY)
 
 # This is the table id for the fusion table
-TABLE_ID = '1QVga82_gzEViomBJui9q4A5SFj9EXDfdEMjSZDsD'
+TABLE_ID = '160HGDt6N_23SllfHdwg6RKGU_pfJmpPl68XjvYuY'
 
 # This is the default columns for the query
 query_cols = []
@@ -42,6 +43,8 @@ from flask import Flask, request
 app = Flask(__name__)
 
 def get_all_data(query):
+    request = service.column().list(tableId=TABLE_ID) 
+    response = request.execute()
     response = service.query().sql(sql=query).execute()
     logging.info(response['columns'])
     logging.info(response['rows'])
