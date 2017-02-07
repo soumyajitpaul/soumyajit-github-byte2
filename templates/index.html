@@ -46,7 +46,26 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
 	<h1>Missing Climbers - Mount Everest</h1>
-         <p>This web-page shows the extraction of data of missing climbers in Mount Everest Expedition, 
+         
+         <p>INTRODUCTION:
+         <br>
+         
+         Mount Everest, at 8,848 metres (29,029 ft) is the world's highest mountain and a particularly desirable peak for mountaineers. 
+         Over 280 people have died trying to climb it and in the last few decades, fatalities have occurred every year. 
+         <br>
+         
+         <center><img width="750" height="250" src="/img/Byte_2_Image_7.jpg" alt="Density of death records_Heat Map"></center>
+         
+         <br>
+         
+         The last year without known fatalities on the mountain was 1977, a year in which only two people reached the summit.
+         Most deaths have been attributed to avalanches, injury from fall, ice collapse, exposure, or health problems related to conditions on the mountain.
+         Not all bodies have been located, so details on those fatalities are not available.
+         </p>
+         
+         <p>
+        <br>
+        This web-page shows the extraction of data of missing climbers in Mount Everest Expedition, 
         using data cleaning procedure to qualify our search. <br> The first  table shows the raw data collected from Google fusuion tables </p>
         <iframe width="1000" height="300" scrolling="yes" frameborder="no" src="https://fusiontables.google.com/embedviz?viz=CARD&amp;q=select+*+from+1_-7pYmyq3_ilQB_fJZvnRJ81ghf7cBmdGMXu2P1k&amp;tmplt=1&amp;cpr=2"></iframe>
         
@@ -72,19 +91,18 @@
 		
 		<br>
 		
-		The following map shows the nationality that represents the missing climbers.<br> It is interesting to note that countries like china, India, USA has not missing records of climbers even 
+		The following map shows the nationality that represents the missing climbers.<br> It is interesting to note that countries like china, India, USA has no missing records of climbers even 
 		though they have significant number of death records.
 		<br>
 		</p>
 		<iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col6+from+1buCnhkpiCY8d6YPsFQiu133jnjkzWLN1GGpxdchG&amp;viz=MAP&amp;h=false&amp;lat=30.49313326630948&amp;lng=96.27187400000004&amp;t=1&amp;z=2&amp;l=col6&amp;y=2&amp;tmplt=2&amp;hml=ONE_COL_LAT_LNG"></iframe>
-	    <iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col6%2C+count()+from+1buCnhkpiCY8d6YPsFQiu133jnjkzWLN1GGpxdchG+group+by+col6+order+by+count()+asc+limit+10&amp;viz=GVIZ&amp;t=COLUMN&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe>
-      
+	    <iframe width="500" height="300" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?containerId=googft-gviz-canvas&amp;q=select+col6%2C+col2+from+1buCnhkpiCY8d6YPsFQiu133jnjkzWLN1GGpxdchG+order+by+col2+asc+limit+10&amp;viz=GVIZ&amp;t=PIE&amp;uiversion=2&amp;gco_forceIFrame=true&amp;gco_hasLabelsColumn=true&amp;width=500&amp;height=300"></iframe>
         
         
       	<p> 
       	<br>
       	
-      	It can be seen from the chart below that the death count due to Avalance is mostly in the summer months - April, May, June.<br>
+      	It can be seen from the chart below that the death count due to Avalanche is mostly in the summer months - April, May, June.<br>
       	From this dataset, we can even infer that avalance is common during the summer seasons and it is risky to climb especially in the month of April and September when the ice is more loose. </p> 
         <center><img width="650" height="250" src="/img/Byte_2_Image_2.png" alt="Avalance_Death V/s Month"></center>
         
