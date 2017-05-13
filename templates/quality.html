@@ -77,6 +77,27 @@
 
     </div> <!-- /container -->
 
+<script type="text/javascript">
+		function calc() {
+    	var level = document.getElementById("level");
+    	var levelValue = parseFloat(level.value);
+
+   		var seconds = document.getElementById("seconds");
+    	var secondsValue = parseFloat(seconds.value);
+
+    	var answer = (10 * (3 + (levelValue * 0.5)) * secondsValue) / 60;
+    	document.getElementById("answer").value = answer.toString();
+}
+</script>
+
+Level: <input type="text" id="level">
+<br>
+Seconds: <input type="text" id="seconds">
+<br>
+Answer: <input type="text" id="answer" />
+<br>
+<button type="button" onclick="javascript:calc();"> Click</button>
+    
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
